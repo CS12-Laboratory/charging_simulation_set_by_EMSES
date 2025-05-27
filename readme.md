@@ -1,7 +1,10 @@
 # 帯電シミュレーション by EMSES
 太陽風が吹き付ける月面の表面帯電現象シミュレーション用の実験セット
 
-EMSES本体に関してはクラスルームから別途ダウンロードする必要あり
+EMSES本体に関しては[MPIEMSES3D Repository](https://github.com/CS12-Laboratory/MPIEMSES3D)から別途ダウンロードする必要あり
+
+**以下のガイドは古いため、随時[EMSES-tutorials](https://github.com/CS12-Laboratory/EMSES-tutorials)を確認すること。**
+
 
 - [帯電シミュレーション by EMSES](#帯電シミュレーション-by-emses)
   - [内容](#内容)
@@ -130,19 +133,18 @@ EMSESで用いるパラメータファイルの解説
 
 ## その他必要なもの
 
-### emses3d_ohhelp20
+### [MPIEMSES3D](https://github.com/CS12-Laboratory/MPIEMSES3D)
 EMSES本体のソースコード
-中身をいじってあるためGoogleクラスルームから要ダウンロード
 
 初めにmakeで実行ファイル"mpiemses3d"をビルドすること
 
 使用の際は、ビルドした実行ファイルをシミュレーションフォルダーにコピーし以下のコマンドで実行する。
 
-(実際の仕様の際はjobファイルを作成しスパコンの実行キューに投入する)
+(実際の使用の際は、jobファイルを作成しスパコンの実行キューに投入する)
 
 ```
 $ <MPI_EXEC> ./mpiemses3D plasma.inp
-※ <MPI_EXEC>: MPI実行コマンド (camphor上では"aprun -n <NUMBER_OF_PROCESS>")
+※ <MPI_EXEC>: MPI実行コマンド (camphor上では"srun -n <NUMBER_OF_PROCESS>")
 ```
 ### Anaconda(python環境)のcamphorへのロード(準備 1.で実施)
 

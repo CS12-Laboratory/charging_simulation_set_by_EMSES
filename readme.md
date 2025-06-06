@@ -126,17 +126,7 @@ EMSESのビルド及び各シミュレーションを実行しその結果の可
 
 ### 準備
 #### 1. スパコン(camphor)の基本環境設定
-スパコン(camphor)にログイン時に読み込まれる~/.bashrcという設定ファイルを修正する。
-
-"# User specific aliases and functions"以下を既存の.bashrc下部に追記すること。
-
-```
-module load intel-python
-```
-
-また.bashrcを置き換えたあとはスパコンに再ログインすること。
-
-再ログイン後、EMSES出力ファイルを読み取るためのライブラリをインストールする。
+EMSES出力ファイルを読み取るためのライブラリをインストールする。
 
 ```
 $ pip install emout camptools
